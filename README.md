@@ -34,10 +34,10 @@ The approach is based on concepts from **Adversarial Search / Game Playing in Ar
 
 The player can move all tiles in four directions:
 
-- ⬆️ Up
-- ⬇️ Down
-- ⬅️ Left
-- ➡️ Right
+-  Up
+-  Down
+-  Left
+-  Right
 
 When two tiles with the same value collide, they merge into a tile with twice their value.
 
@@ -196,7 +196,7 @@ The overall search can be represented as:
 
 ---
 
-# 📊 Heuristic Evaluation Function
+#  Heuristic Evaluation Function
 
 Searching until the end of the game is computationally expensive.
 
@@ -256,7 +256,7 @@ They can be improved through systematic experimentation.
 
 ---
 
-# 🧠 Heuristic Features
+#  Heuristic Features
 
 ## 1. Empty Cells
 
@@ -318,7 +318,7 @@ This encourages keeping the largest tile in a stable position.
 
 ---
 
-# 🌳 Search Depth
+#  Search Depth
 
 The current AI uses:
 
@@ -334,7 +334,7 @@ The current implementation therefore uses a fixed-depth search.
 
 ---
 
-# 🏗️ Algorithm Flow
+#  Algorithm Flow
 
 ```text
 Start Game
@@ -387,7 +387,7 @@ Check Win / Game Over
 
 ---
 
-# 🧩 Main Components
+#  Main Components
 
 | Function / Class | Purpose |
 |---|---|
@@ -403,7 +403,7 @@ Check Win / Game Over
 
 ---
 
-# 🎮 User Interface
+#  User Interface
 
 The game includes a graphical interface implemented using **Pygame**.
 
@@ -438,7 +438,7 @@ The interface also provides:
 
 ---
 
-# 🧠 AI Concepts Demonstrated
+#  AI Concepts Demonstrated
 
 This project demonstrates several important Artificial Intelligence concepts:
 
@@ -478,7 +478,7 @@ Choose Best Action
 
 ---
 
-# 💻 Requirements
+#  Requirements
 
 The project requires:
 
@@ -493,7 +493,7 @@ pip install pygame
 
 ---
 
-# ▶️ How to Run
+#  How to Run
 
 Clone or download the project.
 
@@ -513,7 +513,7 @@ You can either:
 
 ---
 
-# 📁 Project Structure
+#  Project Structure
 
 ```text
 2048-AI-Solver/
@@ -524,7 +524,7 @@ You can either:
 
 ---
 
-# 📈 Performance Evaluation
+#  Performance Evaluation
 
 Because 2048 contains randomness, the AI can produce different results in different games.
 
@@ -554,7 +554,7 @@ This provides a more reliable measure of AI performance.
 
 ---
 
-# 🔬 Future Improvements
+#  Future Improvements
 
 The current implementation provides a foundation for further experimentation.
 
@@ -656,7 +656,7 @@ Each version can be evaluated over multiple independent games.
 
 ---
 
-# ⚠️ Limitations
+#  Limitations
 
 The current AI does **not guarantee** that it will always reach 2048.
 
@@ -672,7 +672,7 @@ Therefore, the objective is to maximize the probability of achieving strong game
 
 ---
 
-# 🎓 Relation to Adversarial Search
+#  Relation to Adversarial Search
 
 The project follows the general game-playing framework:
 
@@ -714,31 +714,7 @@ This makes 2048 a practical example of search in a **stochastic environment**.
 
 ---
 
-# 📚 Course Connection
-
-The AI design follows concepts from the **Adversarial Search / Game Playing** framework:
-
-```text
-Game State
-     ↓
-Successor Function
-     ↓
-Depth-Limited Search
-     ↓
-Evaluation Function
-     ↓
-Chance Nodes
-     ↓
-Expectimax
-```
-
-The general evaluation-function idea is implemented as a weighted combination of board features.
-
-The specific 2048 features and their weights are problem-specific and can be further investigated through experimentation.
-
----
-
-# 🚀 Project Goal
+#  Project Goal
 
 The long-term goal of this project is to investigate how different:
 
@@ -752,11 +728,3 @@ affect the performance of an AI playing 2048.
 Rather than assuming that one heuristic or one set of weights is optimal, the project can be extended into a systematic experimental study.
 
 ---
-
-# 🏁 Key Takeaway
-
-The core idea of the project is:
-
-> **Use Expectimax to reason about both the AI's decisions and the randomness introduced by the game, while using a heuristic evaluation function to estimate the quality of future board states.**
-
-This provides a practical application of **game-playing, heuristic evaluation, depth-limited search, probability, and stochastic search** to the 2048 puzzle.
